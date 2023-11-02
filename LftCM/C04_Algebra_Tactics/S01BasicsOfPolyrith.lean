@@ -121,7 +121,7 @@ Here are a *lot* of exercises.  Do them until you get bored, then go on to the n
 
 
 example {x y : ℤ} (h₁ : 2 * x + y = 4) (h₂ : x + y = 1) : x = 3 := by
-  sorry
+  linear_combination h₁-h₂
 example {r s : ℝ} (h₁ : r + 2 * s = -1) (h₂ : s = 3) : r = -7 := by
   sorry
 example {c : ℚ} (h₁ : 4 * c + 1 = 3 * c - 2) : c = -3 := by
@@ -152,7 +152,7 @@ example {z : ℝ} (h₁ : z ^ 2 + 1 = 0) : z ^ 4 + z ^ 3 + 2 * z ^ 2 + z + 3 = 2
   sorry
 example {p q r : ℚ} (h₁ : p + q + r = 0) (h₂ : p * q + p * r + q * r = 2) :
     p ^ 2 + q ^ 2 + r ^ 2 = -4 := by
-  sorry
+  linear_combination h₁ * (p+q+r) - 2*h₂
 
 /-
 .. Polyrith:
